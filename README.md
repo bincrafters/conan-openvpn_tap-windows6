@@ -1,12 +1,12 @@
 # tap-windows6 is an NDIS 6 implementation of the TAP-Windows driver, used by OpenVPN and other apps.
 
-[Conan.io](https://conan.io) package for [tap-windows6](https://github.com/OpenVPN/tap-windows6) project
+[Conan.io](https://conan.io) package for [openvpn_tap-windows6](https://github.com/OpenVPN/tap-windows6) project
 
-The packages generated with this **conanfile** can be found in [Bintray](https://bintray.com/bincrafters/public-conan/tap-windows6%3Abincrafters).
+The packages generated with this **conanfile** can be found in [Bintray](https://bintray.com/bincrafters/public-conan/openvpn_tap-windows6%3Abincrafters).
 
 ## Conan "latest" version convention
 
-MSYS2 never adopted semantic versioning, so this package offers a unique versioning option on the packages by using a "conan alias" named "latest". 
+This project has not adopted semantic versioning, so this package offers a versioning strategy on the packages by using a "conan alias" named "latest". 
 
 [Conan Alias feature Explained](http://conanio.readthedocs.io/en/latest/reference/commands/alias.html?highlight=conan%20alias)
 
@@ -16,7 +16,7 @@ In summary, users can reference the version of "latest" in their requirements as
 
 ### Basic setup
 
-    $ conan install tap-windows6/latest@bincrafters/stable
+    $ conan install tap-windows6openvpn_tap-windows6/latest@bincrafters/stable
 
 ### Project setup
 
@@ -56,15 +56,15 @@ To upload a package with an alias involved, it's a three-step process.
 
 The first step is standard, upload the concrete package you've recently built:
 
-    $ conan upload tap-windows6/latest@bincrafters/stable --all -r bincrafters
+    $ conan upload openvpn_tap-windows6/latest@bincrafters/stable --all -r bincrafters
 
 The second step is to create or update the "alias package" on your local machine:
 
-	$ conan alias tap-windows6/latest@bincrafters/stable tap-windows6/20171006@bincrafters/stable
+	$ conan alias openvpn_tap-windows6/latest@bincrafters/stable tap-windows6/20171006@bincrafters/stable
 
 The third step is to upload the alias package:
 
-	$conan upload tap-windows6/latest@bincrafters/stable --all -r bincrafters
+	$conan upload openvpn_tap-windows6/latest@bincrafters/stable --all -r bincrafters
 	
 	
 ### License

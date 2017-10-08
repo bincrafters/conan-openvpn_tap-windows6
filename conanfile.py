@@ -13,10 +13,11 @@ class OpenVPNTapWindows6Conan(ConanFile):
            
     def source(self):
         source_url = "https://github.com/OpenVPN/tap-windows6"
-        self.run("git clone --recursive --depth=1 --branch=develop {0}.git".format(source_url))
+        self.run("git clone --recursive --depth=1 {0}.git".format(source_url))
 
     def build(self):
-        self.run("python buildtap.py -b -s {0}".format(self.lib_short_name))
+        build_file = os.path.join(self.lib_short_name, "buildtap.py")
+        self.run("python {0} -b".format(build_file))
 
     def package(self):
         self.copy("LICENSE", dst=".", keep_path=False)
